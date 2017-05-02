@@ -1,3 +1,21 @@
 <h1> Hello World </h1>
 
-<p> It will be <%= @forecast["daily"]["data"][0]["temperatureMax"] %> today </p>
+<h4>The weather for Zip Code <%= session[:geoinfo] ?  session[:geoinfo] : "68117" %></h4>
+<p> The high today will be <%= @forecast["daily"]["data"][0]["temperatureMax"] %> </p>
+<p> The low will be <%= @forecast["daily"]["data"][0]["temperatureMin"] %>
+<p> <%= @forecast["daily"]["data"][0]["summary"] %>
+
+
+
+
+
+<p> <% session[:geoinfo][0].data["standard"]["city"] %> </p>
+<p> <% session[:geoinfo][0].data["standard"]["prov"] %> </p>
+
+
+
+<%= form_tag("/dark_sky", method: "post") do %>
+  <%= label_tag(:zip, "Enter Zip Code:") %>
+  <%= text_field_tag(:zip) %>
+  <%= submit_tag("Get") %>
+<% end %>
