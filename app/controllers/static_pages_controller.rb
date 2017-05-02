@@ -4,6 +4,5 @@ class StaticPagesController < ApplicationController
 
 		@forecast = ForecastIO.forecast(37.8267, -122.423)
 		debugger
-		
 	end 
 end

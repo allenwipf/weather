@@ -61,6 +61,7 @@ GEM
       faraday
       hashie
       multi_json
+    geocoder (1.4.3)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     hashie (3.5.5)
@@ -159,6 +160,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   dotenv-rails
   forecast_io
+  geocoder
   jbuilder (~> 2.0)
   jquery-rails
   rails (= 4.2.8)

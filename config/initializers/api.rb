@@ -1,1 +1,3 @@
 ForecastIO.api_key = ENV["DARK_SKY_KEY"]
+
+GOOGLE_GEO_KEY = ENV["GOOGLE_GEO_KEY"]
