@@ -1,1 +1,1 @@
-DARK_SKY_KEY = ENV["DARK_SKY_KEY"]
+ForecastIO.api_key = ENV["DARK_SKY_KEY"]
