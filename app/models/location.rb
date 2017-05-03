@@ -10,7 +10,7 @@ class Location
 
 	DEFAULT_ZIP = 68117
 
-# Creates a Geo_ca Object based on the zip code entered.
+# Creates a Location Object based on the zip code entered.
 	def initialize(zip = DEFAULT_ZIP)
     zipInfo = (!Geocoder.search(zip).empty? ? Geocoder.search(zip) : Geocoder.search(DEFAULT_ZIP))
 

@@ -5,6 +5,8 @@
 <p> The low will be <%= @today.info["temperatureMin"] %>
 <p> <%= @today.info["summary"] %>
 
+<p> <%= @today.alerts %>
+
 
 
 <%= form_tag("/new_location", method: "post") do %>
