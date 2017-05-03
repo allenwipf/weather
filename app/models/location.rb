@@ -8,11 +8,11 @@ class Location
 	attr_accessor :longt
 	attr_accessor :latt
 
-	ZIP = 68117
+	DEFAULT_ZIP = 68117
 
 # Creates a Geo_ca Object based on the zip code entered.
-	def initialize(zip = ZIP)
-    zipInfo = (!Geocoder.search(zip).empty? ? Geocoder.search(zip) : Geocoder.search(ZIP))
+	def initialize(zip = DEFAULT_ZIP)
+    zipInfo = (!Geocoder.search(zip).empty? ? Geocoder.search(zip) : Geocoder.search(DEFAULT_ZIP))
 
 		@city = zipInfo[0].data["standard"]["city"]
 		@state = zipInfo[0].data["standard"]["prov"]
