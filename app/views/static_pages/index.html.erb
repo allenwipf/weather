@@ -2,9 +2,12 @@
 
 	<h2>Weather for  <%= @geoInfo.city + ", " + @geoInfo.state + " " + @geoInfo.zip %> </h2>
 
-	<p> The high today will be <%= @today.info["temperatureMax"] %> </p>
-	<p> The low will be <%= @today.info["temperatureMin"] %></p>
-	<p> <%= @today.info["summary"] %></p>
+	<p> The high today will be <%= @today.daily["temperatureMax"] %> at <%= DateTime.parse(@today.daily["temperatureMaxTime"]).strftime("%I:%M %p")%></p>
+	<p> The low will be <%= @today.daily["temperatureMin"] %> at <%= @today.daily["temperatureMinTime"] %></p>
+	<p> <%= @today.daily["summary"] %></p>
+
+	<p>There is a <%= (@today.daily[:precipProbability] * 100).to_i %>% chance of <%= @today.daily[:precipType] ? @today.daily[:precipType]  : "precipitation" %></p>
+<% debugger %>
 
 	<p class="alert"> <%= @today.alerts %> </p>
 

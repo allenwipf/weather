@@ -12,13 +12,13 @@ class Location
 
 # Creates a Location Object based on the zip code entered.
 	def initialize(zip = DEFAULT_ZIP)
-    zipInfo = (!Geocoder.search(zip).empty? ? Geocoder.search(zip) : Geocoder.search(DEFAULT_ZIP))
+    address = (!Geocoder.search(zip).empty? ? Geocoder.search(zip) : Geocoder.search(DEFAULT_ZIP))
 
-		@city = zipInfo[0].data["standard"]["city"]
-		@state = zipInfo[0].data["standard"]["prov"]
-		@zip = zipInfo[0].data["standard"]["postal"]
-		@confidence = zipInfo[0].data["standard"]["confidence"]
-		@longt = zipInfo[0].data["longt"]
-		@latt = zipInfo[0].data["latt"]
+		@city = address[0].data["standard"]["city"]
+		@state = address[0].data["standard"]["prov"]
+		@zip = address[0].data["standard"]["postal"]
+		@confidence = address[0].data["standard"]["confidence"]
+		@longt = address[0].data["longt"]
+		@latt = address[0].data["latt"]
 	end
 end

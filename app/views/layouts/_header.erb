@@ -1,11 +1,11 @@
-	<nav class="navbar navbar-default">
-	  <div class="container-fluid container">
-	    <div class="navbar-header">
-				<a class="navbar-brand" href="/">Weather</a>
-				<%= form_tag("/new_location", method: "post", class: "form-inline navbar-form navbar-left") do %>
-	      	<%= text_field_tag(:zip, "", class: "form-control address-input") %>
-	  			<%= submit_tag("Get", class: "btn btn-default") %>
-				<% end %>
-	    </div>
-	  </div>
-	</nav>
+<nav class="navbar navbar-default">
+  <div class="container-fluid container">
+    <div class="navbar-header">
+			<a class="navbar-brand" href="/">Weather</a>
+			<%= form_tag("/new_location", method: "post", class: "form-inline navbar-form navbar-left") do %>
+      	<%= text_field_tag(:address, "", class: "form-control address-input") %>
+  			<%= submit_tag("Get", class: "btn btn-default") %>
+			<% end %>
+    </div>
+  </div>
+</nav>

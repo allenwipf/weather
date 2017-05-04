@@ -1,7 +1,7 @@
 class LocationsController < ApplicationController
-	# Sets the session variable object to new location based on the zip code entered
+	# Sets the session variable object to new location based on full or partial address entered
 	def new
-		session[:zip] = params[:zip]
+		session[:address] = params[:address]
 		redirect_to root_path
 	end 
 end
