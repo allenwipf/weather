@@ -1,11 +1,17 @@
-
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+			<a class="navbar-brand" href="/">Weather</a>
+    </div>
+  </div>
+</nav>
 
 <h2>Weather for  <%= @geoInfo.city + ", " + @geoInfo.state + " " + @geoInfo.zip %> </h2>
 <p> The high today will be <%= @today.info["temperatureMax"] %> </p>
 <p> The low will be <%= @today.info["temperatureMin"] %>
 <p> <%= @today.info["summary"] %>
 
-<p> <%= @today.alerts %>
+<p class="alert"> <%= @today.alerts %>
 
 
 
